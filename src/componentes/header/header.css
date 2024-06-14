@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilda Display', serif;
+
+}
+
+.sectionMain {
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ulNav {
+    display: flex;
+    align-items: center;
+}
+
+.linav-envios a{
+    text-decoration: none;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 20px;
+    white-space: nowrap;
+    color: black;
+}
+
+.linav-redes a{
+    text-decoration: none;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 20px;
+    white-space: nowrap;
+    color: black;
+}
+
+.linav-sesion a{
+    text-decoration: none;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 20px;
+    white-space: nowrap;
+    color: black;
+}
+
+.linav-carrito a{
+    text-decoration: none;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 20px;
+    white-space: nowrap;
+    color: black;
+}
+.h1title {
+    display: flex;
+    justify-content: center;
+    margin: 1px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 0.8;
+}
+
+
+.h1title a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+

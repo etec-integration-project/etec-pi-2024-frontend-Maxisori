@@ -1,0 +1,53 @@
+.carritodecompras {
+  font-size: 80px;
+  color: #ffffff;
+}
+
+.conteiner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  width: 400px;
+  gap: 20px;
+}
+.boton {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s wa;
+}
+
+.botones:hover {
+  background-color: #ffffff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  width: 50%;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+li button {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 3px 5px;
+  width: 20px;
+}
+
+li button:hover {
+  background-color: #ffffff;
+};

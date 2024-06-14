@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Gilda Display', serif;
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 89vh;
+  position: relative;
+  background-image: url(/src/multimedia/image.png);
+  max-width: 100%;
+}
+.barra-de-busqueda{
+  width: 400px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 460px;
+  background-color: white;
+}
+.imagen-producto {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+}
+.producto {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  width: 250px;
+  text-align: center;
+  padding-top: 15px;
+}
+.producto2 {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  width: 400px; 
+  height: 400px;
+}
+.nombreproducto{
+  font-size: 20px;
+  font-family: 'Gilda Display', serif;
+}
+.nombreproducto2{
+  font-size: 30px;
+  font-family: 'Gilda Display', serif;
+}
+.precio{
+  font-family: 'Gilda Display', serif;
+  font-size: 15px;
+}
+
+.boton-carrito {
+  background-color: #2b2b2b;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: 'Gilda Display', serif;
+  width: 170px; 
+  text-decoration: none;
+  
+}
+.src {
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+}
+
+.body {
+  display: flex;
+  width: 100%;
+  gap: 1em;
+}
+
+.body > * {
+  width: 50%;
+}
+
+.carrito_de_compras {
+  color: white;
+}
+
+.carrito_contenido {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
