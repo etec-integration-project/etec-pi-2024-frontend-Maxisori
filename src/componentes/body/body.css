@@ -4,22 +4,10 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Gilda Display', serif;
-  background-repeat: no-repeat;
-  background-size:cover;
-  height: 89vh;
-  position: relative;
   background-image: url(/src/multimedia/image.png);
   max-width: 100%;
 }
-.barra-de-busqueda{
-  width: 400px;
-  margin: 10px;
-  justify-content: center;
-  align-items: center;
-  margin-left: 460px;
-  background-color: white;
-}
+
 .imagen-producto {
   width: 200px;
   height: 250px;
@@ -75,22 +63,11 @@ body {
   padding: 10px;
 }
 
-.body {
+.produ {
+  justify-content: center;
   display: flex;
-  width: 100%;
-  gap: 1em;
+  align-items: center;
+  height: 100vh;
 }
 
-.body > * {
-  width: 50%;
-}
 
-.carrito_de_compras {
-  color: white;
-}
-
-.carrito_contenido {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5em;
-}
