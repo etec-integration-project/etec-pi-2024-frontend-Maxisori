@@ -3,6 +3,10 @@ import './body.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import producto1Img from '../multimedia/Remeranegra.jpg'
+import producto2Img from '../multimedia/RemeraBasica.jpg'
+import producto3Img from '../multimedia/RemeraUnisex.jpg'
+ 
 export default function Body() {
     const [data, setData] = useState([]);
 
@@ -22,25 +26,37 @@ export default function Body() {
 
     return (
       <>
-      <div className="body">
-        {data.map(producto => (
-            <div className="producto" key={producto.id}>
-                <img className='imagen-producto' src={producto.img} alt={producto.name} />
-                <h2 className='nombreproducto'>{producto.name}</h2>
-                <p className='precio'>Precio: {producto.price}</p>
-            </div>
-        ))}
-      </div>
-      <div className='foto-fondo' >
-        <img src=""/>
-      </div>
-      <div className="produ"  >
-        <div className="producto"> 
-            <img className='imagen-producto' src= 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCJGaw4dYuOtiSFm5DPSbK99vuPnL_GQr_ZEiYuUX89KeNaK8zNSee9Kduv4VbANNX964&usqp=CAU' alt='Remera negra oversize' style={{ width: '150px', height: '150px' }} />
-            <h2 className='nombreproducto'>Remera negra oversize</h2>
-            <p className='precio'>Precio: 10.000</p>
+        <div className="body">
+          {data.map(producto => (
+              <div className="producto" key={producto.id}>
+                  <img className='imagen-producto' src={producto.img} alt={producto.name} />
+                  <h2 className='nombreproducto'>{producto.name}</h2>
+                  <p className='precio'>Precio: {producto.price}</p>
+                  <button className='boton-carrito'>Agregar al Carrito</button>
+              </div>
+          ))}
         </div>
-      </div> 
-         
-    </>
-)}
+
+        <div className="produ">
+          <div className="producto"> 
+              <img className='imagen-producto' src={producto1Img} alt='Remera negra oversize' />
+              <h2 className='nombreproducto'>Remera negra oversize</h2>
+              <p className='precio'>Precio: 10.000</p>
+              <button className='boton-carrito'>Agregar al Carrito</button>
+          </div>
+          <div className="producto"> 
+              <img className='imagen-producto' src={producto2Img} alt='Remera blanca básica' />
+              <h2 className='nombreproducto'>Remera blanca básica</h2>
+              <p className='precio'>Precio: 8.500</p>
+              <button className='boton-carrito'>Agregar al Carrito</button>
+          </div>
+          <div className="producto"> 
+              <img className='imagen-producto' src={producto3Img} alt='Remera gris melange' />
+              <h2 className='nombreproducto'>Remera gris melange</h2>
+              <p className='precio'>Precio: 9.000</p>
+              <button className='boton-carrito'>Agregar al Carrito</button>
+          </div>
+        </div> 
+      </>
+    );
+}
