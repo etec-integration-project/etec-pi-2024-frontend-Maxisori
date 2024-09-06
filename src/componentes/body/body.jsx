@@ -32,6 +32,7 @@ export default function Body() {
     <>
       <img className="imagenprincipal" src={imagenprinciapl} alt="Imagen principal" />
 
+
       {/* Mostrar todos los productos en la página principal */}
       <div className="body">
         {data.map((producto) => (

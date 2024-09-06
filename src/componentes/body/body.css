@@ -9,6 +9,17 @@ body, html {
   height: 100%;
 }
 
+.imagenprincipal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Estilo del header con el título */
 .header {
   display: flex;
   flex-direction: column;
@@ -18,7 +29,8 @@ body, html {
 
 .titulo {
   font-size: 3rem;
-  color: black;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   font-family: 'Gilda Display', serif;
   margin-bottom: 20px;
 }
@@ -26,9 +38,11 @@ body, html {
 /* Grid layout para los productos */
 .body {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Múltiples columnas que se adaptan al tamaño de la pantalla */
+  height: auto;
   gap: 20px;
-  padding: 20px;
+  padding: 5px;
+  margin-top: 70px; /* Separación entre el header y los productos */
 }
 
 .producto {
@@ -40,7 +54,7 @@ body, html {
 
 .imagen-producto {
   width: 200px;
-  height: 250px;
+  height: 230px;
   object-fit: cover;
 }
 
@@ -65,19 +79,4 @@ body, html {
   font-family: 'Gilda Display', serif;
   width: 170px;
   text-decoration: none;
-}
-
-/* Imagen principal abajo que abarca toda la pantalla */
-.imagen-contenedor {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh; /* Ocupa toda la altura de la ventana */
-}
-
-.imagen-principal-abajo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }

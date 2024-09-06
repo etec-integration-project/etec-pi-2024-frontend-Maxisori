@@ -6,6 +6,7 @@ import Header from './componentes/header/header';
 import Body from './componentes/body/body';
 import Login from './componentes/login/login';
 import Register from './componentes/register/register'; 
+import Remeras from './componentes/Remeras/remeras';
 
 
 
@@ -58,6 +59,7 @@ function App() {
             element={
               <>
                 <Header />
+                <Remeras />
               </>
             }
           /> 
