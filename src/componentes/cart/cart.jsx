@@ -1,46 +1,41 @@
-import React, { useState, useEffect, } from 'react';
+// Cart.jsx
+import React, { useContext, useState } from 'react';
 import './cart.css';
+import { CartContext } from './CartContext';
 
-function Cart() {
-    const [items, setItems] = useState([]);
-    
+export default function Cart() {
+  const { cart, removeFromCart, clearCart } = useContext(CartContext);
+  const [purchaseSuccess, setPurchaseSuccess] = useState(false);
 
-    const addItem = () => {
-        const newItem = `Ítem ${items.length + 1}`;
-        setItems([...items, newItem]);
-    };
+  const handlePurchase = () => {
+    clearCart();
+    setPurchaseSuccess(true);
+    setTimeout(() => setPurchaseSuccess(false), 3000); // Ocultar el mensaje después de 3 segundos
+  };
 
-    const deleteItem = (index) => {
-        const updatedItems = [...items];
-        updatedItems.splice(index, 1);
-        setItems(updatedItems);
-    };
-
-    const deleteAllItems = () => {
-        setItems([]);
-    };
-
-    const goToPayment = () => {
-        alert('Su pago se realizo con exito');
-    };
-
-    return (
-        <div>
-            <h1 className='carrito de compras'>Carrito de Compras</h1>
-                <div className='conteiner'>
-                    <button className="boton2" onClick={addItem}>Agregar Ítem</button>
-                    <button className="boton2" onClick={deleteAllItems}>Eliminar Todo</button>
-                    <button className="boton2" onClick={goToPayment}>Ir a Pagar</button>
-                </div>
-            <ul>
-                {items.map((item, index) => (
-                    <li key={index}>
-                        {item}
-                        <button onClick={() => deleteItem(index)} className='X'>X</button>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
+  return (
+    <div className="carrito">
+      <h2>Carrito</h2>
+      {purchaseSuccess && <p className="success-message">¡Su compra se realizó con éxito!</p>}
+      {cart.length === 0 ? (
+        <p>El carrito está vacío</p>
+      ) : (
+        <ul>
+          {cart.map((producto, index) => (
+            <li key={index} className="carrito-item">
+              <img src={producto.img} alt={producto.name} style={{ width: '50px', height: '50px' }} />
+              <span>{producto.name}</span>
+              <span> - ${producto.price}</span>
+              <button className="boton-borrar" onClick={() => removeFromCart(index)}>Borrar</button>
+            </li>
+          ))}
+        </ul>
+      )}
+      {cart.length > 0 && (
+        <button className="boton-comprar" onClick={handlePurchase}>
+          Finalizar Compra
+        </button>
+      )}
+    </div>
+  );
 }
-export default Cart;

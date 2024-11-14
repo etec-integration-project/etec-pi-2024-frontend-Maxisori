@@ -1,23 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+// App.jsx
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import React from 'react';
+import { CartProvider } from './componentes/cart/CartContext'; // Importa el CartProvider
 import Carrito from './componentes/cart/cart';
 import Header from './componentes/header/header';
 import Body from './componentes/body/body';
 import Login from './componentes/login/login';
-import Register from './componentes/register/register'; 
+import Register from './componentes/register/register';
 import Remeras from './componentes/Remeras/remeras';
-
-
 
 function App() {
   return (
-    <>
-    
+    <CartProvider>
       <Router>
-
         <Routes>
-
           <Route 
             path='/'
             element={
@@ -71,15 +68,10 @@ function App() {
               </>
             }
           />
-          
         </Routes>
-
       </Router>
-
-      
-    </>    
+    </CartProvider>
   );
 }
+
 export default App;
-
-
