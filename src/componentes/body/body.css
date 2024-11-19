@@ -1,20 +1,12 @@
 /* Contenedor principal de productos */
 .body {
   display: flex;
-  flex-wrap: wrap; /* Permite que los productos se ajusten si no caben en una fila */
+  flex-direction: row; /* Asegura que los productos estén en una sola fila */
   gap: 20px; /* Espacio entre productos */
-  justify-content: center; /* Centra los productos horizontalmente */
+  justify-content: flex-start; /* Alinea los productos al principio horizontalmente */
+  overflow-x: auto; /* Permite desplazamiento horizontal si hay más productos */
   padding: 20px;
-}
-
-/* Estilos individuales para cada producto */
-.producto {
-  background-color: white;
-  border-radius: 8px;
-  padding: 15px;
-  width: 200px; /* Ancho fijo para cada producto */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
+  white-space: nowrap; /* Evita que los productos se ajusten a otra línea */
 }
 
 /* Estilos para la imagen de cada producto */

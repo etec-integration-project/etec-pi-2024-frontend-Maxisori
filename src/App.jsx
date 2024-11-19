@@ -9,6 +9,7 @@ import Body from './componentes/body/body';
 import Login from './componentes/login/login';
 import Register from './componentes/register/register';
 import Remeras from './componentes/Remeras/remeras';
+import SuetersBuzos from '../src/componentes/sueters-buzos/sueters-buzos';
 
 function App() {
   return (
@@ -52,7 +53,7 @@ function App() {
             }
           /> 
           <Route 
-            path='/redes'
+            path='/remeras'
             element={
               <>
                 <Header />
@@ -61,10 +62,11 @@ function App() {
             }
           /> 
           <Route 
-            path='/envios'
+            path='/Sueters-Buzos'
             element={
               <>
                 <Header />
+                <SuetersBuzos />
               </>
             }
           />
