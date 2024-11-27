@@ -22,7 +22,7 @@ const RegisterForm = ({ history }) => {
       setError('La contraseña debe tener al menos 6 caracteres.');
     } else {
       try {
-        await axios.post('http://localhost:8080/registro', {
+        await axios.post('/app/registro', {
           username,
           email,
           password,

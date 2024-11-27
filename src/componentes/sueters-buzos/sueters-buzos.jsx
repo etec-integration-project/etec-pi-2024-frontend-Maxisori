@@ -12,7 +12,7 @@ const Remeras = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/producto');
+        const response = await axios.get('/app/producto');
         console.log('Datos recibidos:', response.data);
         setData(response.data);
       } catch (error) {

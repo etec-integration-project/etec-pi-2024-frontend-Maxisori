@@ -7,16 +7,40 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const addToCart = (producto) => {
-    setCart((prevCart) => [...prevCart, producto]);
+    if (cart[producto.id]) {
+      const updatedCart = { ...cart };
+      updatedCart[producto.id].quantity += 1;
+      setCart(updatedCart);
+    } else {
+      setCart({
+      ...cart,
+      [producto.id]: { ...producto, quantity: 1 },
+      });
+    }
+
+
+    // setCart((prevCart) => [...prevCart, producto]);
   };
 
-  const removeFromCart = (index) => {
-    setCart((prevCart) => prevCart.filter((_, i) => i !== index));
+  const removeFromCart = (productId) => {
+    const updatedCart = { ...cart };
+
+    if (updatedCart[productId]) {
+      if (updatedCart[productId].quantity > 1) {
+        updatedCart[productId].quantity -= 1;
+      } else {
+        delete updatedCart[productId];
+      }
+
+      setCart(updatedCart);
+    }
+
+    // setCart((prevCart) => prevCart.filter((_, i) => i !== index));
   };
 
   const clearCart = () => {
+    console.log(cart);
     setCart([]);
-    alert('¡Su compra se realizó con éxito!'); // Mostrar el mensaje de éxito aquí
   };
 
   return (

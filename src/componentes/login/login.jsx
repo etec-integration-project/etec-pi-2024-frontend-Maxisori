@@ -24,7 +24,7 @@ const LoginForm = () => {
 
     setLoading(true); // Mostrar indicador de carga
     try {
-      const response = await axios.post('http://localhost:8080/login', {
+      const response = await axios.post('/app/login', {
         username: usernameOrEmail, // Enviar como username (o email) y password
         password,
       });

@@ -74,6 +74,7 @@ ul {
 
 /* Botón de borrar */
 .boton-borrar {
+  width: 50%;
   background: #ff4d4d;
   color: white;
   border: none;
@@ -109,4 +110,10 @@ ul {
 .carrito p {
   font-size: 18px;
   color: #555;
+}
+
+.opciones {
+  display: flex;
+  width: 50%;
+  gap: 5em;
 }
