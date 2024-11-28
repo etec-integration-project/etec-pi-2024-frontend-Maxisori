@@ -4,6 +4,8 @@ import './body.css';
 import axios from 'axios';
 import imagenprinciapl from '../multimedia/image.png';
 import { CartContext } from '../cart/CartContext'; // Importa el contexto
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'; // Icono de carrito
 
 export default function Body() {
   const [data, setData] = useState([]);
@@ -27,7 +29,7 @@ export default function Body() {
   const handleAddToCart = (producto) => {
     addToCart(producto);
     setShowMessage(true); // Muestra el mensaje de producto añadido
-    setTimeout(() => setShowMessage(false), 2000); // Oculta el mensaje después de 2 segundos
+    setTimeout(() => setShowMessage(false), 3000); // Oculta el mensaje después de 3 segundos
   };
 
   return (
@@ -35,7 +37,14 @@ export default function Body() {
       <img className="imagenprincipal" src={imagenprinciapl} alt="Imagen principal" />
 
       {/* Mensaje de producto añadido al carrito */}
-      {showMessage && <div className="mensaje-anadir">¡Producto añadido al carrito!</div>}
+      {showMessage && (
+        <div className="mensaje-anadir">
+          <div className="icono">
+            <FontAwesomeIcon icon={faShoppingCart} />
+          </div>
+          ¡Producto añadido al carrito!
+        </div>
+      )}
 
       <div className="body">
         {data.map((producto) => (
