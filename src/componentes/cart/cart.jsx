@@ -16,7 +16,7 @@ export default function Cart() {
 
     if (jsonifiedCart !== "[]") {
       try {
-        await axios.post('/app/anadir', {jsonifiedCart});
+        await axios.post('/app/anadir', { jsonifiedCart });
 
         clearCart();
         setPurchaseSuccess(true);
@@ -25,7 +25,7 @@ export default function Cart() {
         alert('Error al realizar la compra');
       }
     } else {
-      alert('Seleccionar articulos antes de realizar la compra.');
+      alert('Seleccionar artículos antes de realizar la compra.');
     }
   };
 
@@ -59,8 +59,15 @@ export default function Cart() {
                 </li>
               ))}
             </ul>
+
+            {/* Botón para finalizar la compra */}
             <button className="boton-comprar" onClick={handlePurchase}>
               Finalizar Compra
+            </button>
+
+            {/* Botón para vaciar el carrito */}
+            <button className="boton-borrar-todo" onClick={clearCart}>
+              Vaciar Carrito
             </button>
           </>
         )}
