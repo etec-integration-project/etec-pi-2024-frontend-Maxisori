@@ -119,3 +119,25 @@
   text-decoration: none;
   display: inline;
 }
+
+.mensaje-anadir {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 1000;
+}
+
+.mensaje-anadir {
+  animation: fadeOut 2s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
