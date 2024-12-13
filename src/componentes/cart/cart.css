@@ -1,0 +1,134 @@
+/* Imagen principal de fondo */
+.imagenprincipal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Contenedor del carrito */
+.carrito {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Título del carrito */
+.carrito h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Mensaje de éxito */
+.success-message {
+  color: green;
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Lista de productos */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.carrito-item:last-child {
+  border-bottom: none; /* Sin borde en el último elemento */
+}
+
+.carrito-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.carrito-item span {
+  flex: 1;
+  margin: 0 15px;
+  text-align: left;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Botón de borrar */
+.boton-borrar {
+  width: 50%;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px; /* Tamaño reducido */
+  cursor: pointer;
+  font-size: 12px; /* Texto más pequeño */
+}
+
+.boton-borrar:hover {
+  background: #cc0000;
+}
+
+.boton-borrar-todo {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.boton-borrar-todo:hover {
+  background-color: darkred;
+}
+
+
+/* Botón de finalizar compra */
+.boton-comprar {
+  background: #808080; /* Gris */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.boton-comprar:hover {
+  background: #666666; /* Gris más oscuro al pasar el cursor */
+}
+
+/* Mensaje de carrito vacío */
+.carrito p {
+  font-size: 18px;
+  color: #555;
+}
+
+.opciones {
+  display: flex;
+  width: 50%;
+  gap: 5em;
+}

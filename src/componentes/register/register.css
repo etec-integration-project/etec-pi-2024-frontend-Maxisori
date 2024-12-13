@@ -1,0 +1,103 @@
+.register-form1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+}
+  
+form {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+}
+
+h2 {
+    font-size: 35px;
+    text-align: center;
+    color: #000000;
+}
+  
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+  
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+  
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+}
+  
+button:hover {
+    background-color: #0056b3;
+}
+  
+p {
+    text-align: center;
+    margin-top: 10px;
+}
+  
+span {
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+  
+span:hover {
+    text-decoration: none;
+}
+
+.error-message {
+    background-color: #f44336; /* Color de fondo rojo */
+    color: white; /* Color del texto blanco */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 3px; /* Bordes redondeados */
+    text-align: center; /* Texto centrado */
+    margin-top: 10px; /* Margen superior */
+    font-size: 14px; /* Tamaño de fuente */
+}
+  
+  /* Estilo para el mensaje de éxito (puedes usarlo para mensajes de éxito si lo deseas) */
+.success-message {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Color del texto blanco */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 3px; /* Bordes redondeados */
+    text-align: center; /* Texto centrado */
+    margin-top: 10px; /* Margen superior */
+    font-size: 14px; /* Tamaño de fuente */
+}
+
+
+.recaptcha-container {
+
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    transform: scale(0.9);
+}
+
+  

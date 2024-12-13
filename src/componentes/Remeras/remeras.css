@@ -1,0 +1,112 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+/* Imagen de fondo principal */
+.imagenprincipal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Contenedor de productos */
+.body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Múltiples columnas adaptables */
+    height: auto;
+    gap: 20px;
+    padding: 5px;
+    margin-top: 70px; /* Separación entre el header y los productos */
+}
+
+/* Estilo de cada producto */
+.producto {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Imagen de producto */
+.imagen-producto {
+    width: 200px;
+    height: 230px;
+    object-fit: cover;
+}
+
+/* Nombre del producto */
+.nombreproducto {
+    font-size: 20px;
+    font-family: 'Gilda Display', serif;
+}
+
+/* Precio del producto */
+.precio {
+    font-family: 'Gilda Display', serif;
+    font-size: 15px;
+}
+
+/* Botón de agregar al carrito */
+.boton-carrito {
+    background-color: #2b2b2b;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: 'Gilda Display', serif;
+    width: 170px;
+    text-decoration: none;
+}
+
+/* Estilo para el mensaje de "Producto añadido" */
+.mensaje-anadir {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Degradado moderno */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    animation: fadeInOut 3s ease-out forwards; /* Animación de entrada y salida */
+}
+
+/* Estilo para el ícono dentro del mensaje */
+.mensaje-anadir .icono {
+    background-color: white;
+    padding: 8px;
+    border-radius: 50%;
+    color: #2575fc; /* Color del ícono */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animación de aparición y desaparición del mensaje */
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-20px); } /* Comienza oculto y un poco más arriba */
+    40% { opacity: 1; transform: translateY(0); } /* Se hace visible */
+    80% { opacity: 1; transform: translateY(0); } /* Se mantiene visible */
+    100% { opacity: 0; transform: translateY(20px); } /* Desaparece y se mueve hacia abajo */
+}
